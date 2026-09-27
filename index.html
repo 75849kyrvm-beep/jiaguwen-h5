@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>从古来，向今生 —— 一个字的三千年</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="pager">
+  <!-- 第1页 封面 -->
+  <section class="slide s-dark" id="p1">
+    <div class="stage">
+      <canvas id="crackCanvas"></canvas>
+      <div class="p1-content">
+        <p class="mini-title gold">三千年前，有人在龟甲上刻下了第一个问题</p>
+        <h1 class="title-xl">从古来<br>向今生</h1>
+        <p class="subtitle">—— 一个字的三千年</p>
+        <p class="hint" id="p1hint">长按裂纹，让它亮起来</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第2页 它差点被吃掉 -->
+  <section class="slide s-paper" id="p2">
+    <div class="stage col">
+      <p class="mini-title ink">1899 · 北京 · 一家老药铺</p>
+      <h2 class="title-l ink">它差点被吃掉</h2>
+      <div class="scratch-wrap">
+        <div class="scratch-under">
+          <svg viewBox="0 0 300 200" class="rubbing" aria-label="甲骨刻辞拓片">
+            <rect width="300" height="200" fill="#14100c"/>
+            <g stroke="#e8dfc8" stroke-width="2" fill="none" stroke-linecap="round">
+              <path d="M40 30 L40 70 M40 50 L62 50 M62 30 L62 70"/>
+              <path d="M90 30 Q90 60 78 78 M90 30 Q92 60 104 78 M84 44 L98 44"/>
+              <path d="M130 28 L130 80 M118 40 L142 40 M122 62 L138 62"/>
+              <path d="M170 30 L190 30 L190 55 L170 55 Z M170 68 L192 68"/>
+              <path d="M220 30 L220 75 M210 45 L232 45 M224 62 Q228 74 238 78"/>
+              <path d="M255 32 L268 32 M261 32 L261 76 M253 55 Q261 48 270 55"/>
+              <path d="M42 105 L42 160 M30 118 L56 118 M34 140 L52 140"/>
+              <path d="M88 110 Q96 104 104 110 M96 106 L96 158 M84 132 L108 132"/>
+              <path d="M132 105 L132 160 M132 132 L158 132 M145 105 L145 160"/>
+              <path d="M182 108 L206 108 M194 108 L194 158 M182 132 L206 132 M182 158 L206 158"/>
+              <path d="M232 110 Q244 104 252 112 L252 128 Q242 136 232 128 Z M242 132 L242 160 M232 148 L254 148"/>
+            </g>
+          </svg>
+          <p class="rubbing-cap">拓片 · 殷墟甲骨刻辞（示意摹绘）</p>
+        </div>
+        <canvas id="scratchCanvas"></canvas>
+        <p class="scratch-tip" id="scratchTip">用手指刮开药粉</p>
+      </div>
+      <p class="narration">国子监祭酒王懿荣得了疟疾，方子里有一味药，叫「龙骨」。抓药回来，他盯着这些骨头看了很久——上面的刻痕，不是虫蛀，是字。而此前千百年，中国人差一点就把老祖宗写下的第一批文字，磨成粉，喝进了肚子里。</p>
+    </div>
+  </section>
+
+  <!-- 第3页 向天问一个字 -->
+  <section class="slide s-dark" id="p3">
+    <div class="stage col">
+      <p class="mini-title gold">殷商 · 宗庙之夜</p>
+      <h2 class="title-l">向天问一个字</h2>
+      <div class="divine-box">
+        <svg viewBox="0 0 200 200" id="boneSvg" class="bone">
+          <ellipse cx="100" cy="100" rx="78" ry="88" fill="#efe6d2"/>
+          <ellipse cx="100" cy="100" rx="78" ry="88" fill="none" stroke="#c9b98f" stroke-width="2"/>
+          <path id="divineCrack" d="" stroke="#b3541e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+        <p class="divine-char" id="divineChar"></p>
+      </div>
+      <div class="divine-input" id="divineInput">
+        <input type="text" id="questionInput" maxlength="20" placeholder="写下你最近想问的一个问题">
+        <button class="btn-gold" id="divineBtn">长按灼烧</button>
+      </div>
+      <p class="narration light">打仗前要问，求雨要问，王后生孩子也要问。烧红的锥子抵上去，「咔」的一声——裂纹，就是天的回答。你看这个「卜」字，三千年来，它一直就是裂纹本身的形状。</p>
+    </div>
+  </section>
+
+  <!-- 第4页 一个字的三千年 -->
+  <section class="slide s-paper" id="p4">
+    <div class="stage col">
+      <p class="mini-title ink">字形演变 · 车</p>
+      <h2 class="title-l ink">一个字的三千年</h2>
+      <div class="evo-stage">
+        <div class="evo-glyph" id="evoGlyph">
+          <svg viewBox="0 0 200 200" id="evoOracle" class="evo-svg">
+            <g stroke="#14100c" stroke-width="5" fill="none" stroke-linecap="round">
+              <circle cx="55" cy="150" r="26"/><circle cx="145" cy="150" r="26"/>
+              <path d="M55 124 L55 60 M145 124 L145 60 M55 92 L145 92 M100 92 L100 30 M82 30 L118 30"/>
+            </g>
+          </svg>
+          <span id="evoText" class="evo-text hidden"></span>
+        </div>
+        <p class="evo-era" id="evoEra">甲骨文 · 商</p>
+      </div>
+      <input type="range" id="evoSlider" min="0" max="5" value="0" step="1" class="evo-slider">
+      <div class="evo-labels"><span>甲骨文</span><span>金文</span><span>小篆</span><span>隶书</span><span>楷书</span><span>今天</span></div>
+      <p class="narration">三千年前，它是两个轮子一根轴的简笔画；今天，它躺在你的输入法里。世界上没有第二种文字，能让三千年前的画，今天还被认出来。</p>
+    </div>
+  </section>
+
+  <!-- 第5页 悬赏 -->
+  <section class="slide s-dark" id="p5">
+    <div class="stage col">
+      <p class="mini-title gold">未解之谜</p>
+      <h2 class="title-l">一个字，十万元</h2>
+      <p class="big-line">这些字，三千年无人读懂。</p>
+      <div class="unknown-field" id="unknownField"></div>
+      <p class="narration light">已发现的四千多个甲骨文字里，约一半至今没人认识。中国文字博物馆悬赏：破译一个，奖励十万元。它们还在等——等一个能读懂的人。<br><span class="gold-text">点击一个字，认领它。</span></p>
+      <div class="claim-card hidden" id="claimCard">
+        <div class="claim-glyph" id="claimGlyph"></div>
+        <p id="claimText"></p>
+        <button class="btn-gold" id="claimClose">收下这张认领卡</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第6页 三千岁，正年轻 -->
+  <section class="slide s-paper" id="p6">
+    <div class="stage col">
+      <p class="mini-title ink">古老的字，年轻的玩法</p>
+      <h2 class="title-l ink">三千岁，正年轻</h2>
+      <div class="danmu" id="danmu">
+        <span class="dm">小鹿乱撞 🦌</span><span class="dm">甲骨文日历</span><span class="dm">斗图神器</span>
+        <span class="dm">AI 识甲骨</span><span class="dm">甲骨文街舞</span><span class="dm">手机壳卖萌</span>
+      </div>
+      <div class="name-gen">
+        <input type="text" id="nameInput" maxlength="4" placeholder="输入你的名字">
+        <button class="btn-ink" id="nameBtn">生成甲骨文名字</button>
+      </div>
+      <div class="name-poster hidden" id="namePoster">
+        <p class="np-line" id="npName"></p>
+        <p class="np-sub">你的名字，三千年前就有人写过</p>
+        <p class="np-foot">从古来，向今生 · 一个字的三千年</p>
+      </div>
+      <p class="narration">它能斗图，能上日历，能跳街舞。活得最久的字，反而玩得最野。</p>
+    </div>
+  </section>
+
+  <!-- 第7页 你每天都在写它的后裔 -->
+  <section class="slide s-paper" id="p7">
+    <div class="stage col">
+      <p class="mini-title ink">日常对话里的甲骨文</p>
+      <h2 class="title-l ink">你每天都在写它的后裔</h2>
+      <div class="chat" id="chat">
+        <div class="bubble left">今晚<b class="kw" data-g="jia">回家</b>吗</div>
+        <div class="bubble right"><b class="kw" data-g="xin">想</b>你做的饭了</div>
+        <div class="bubble left">周末一起去看<b class="kw" data-g="che">车</b>展？</div>
+        <div class="bubble right">好呀，说好<b class="kw" data-g="he">和</b>你一起去</div>
+      </div>
+      <div class="glyph-pop hidden" id="glyphPop">
+        <div id="glyphPopSvg"></div>
+        <p id="glyphPopText"></p>
+      </div>
+      <p class="counter" id="p7counter">你今天认出了 0 个甲骨文的子孙</p>
+    </div>
+  </section>
+
+  <!-- 第8页 方言各异 文字归一 -->
+  <section class="slide s-dark" id="p8">
+    <div class="stage col">
+      <p class="mini-title gold">同一片土地，千万种口音</p>
+      <h2 class="title-l">说的是不同的方言<br>写的是同一个字</h2>
+      <div class="map-box" id="mapBox"></div>
+      <p class="narration light">无论天南地北，我们写下来，都是同一个字。汉字就像一条看不见的线，把说着不同口音的人，缝进同一个家——这就是我们共有的精神家园。</p>
+      <button class="btn-gold" id="dialectBtn">用你的方言说一句「我们是一家人」</button>
+    </div>
+  </section>
+
+  <!-- 第9页 从裂纹到星河 -->
+  <section class="slide s-dark" id="p9">
+    <div class="stage">
+      <canvas id="starCanvas"></canvas>
+      <div class="p9-content">
+        <p class="mini-title gold">那些字没有躺在博物馆里睡觉</p>
+        <h2 class="title-l">从裂纹，到星河</h2>
+        <p class="narration light">三千年前，一个贞人在龟甲上刻下裂纹，向天要一个答案。三千年后，你用手指点亮了它。它们在你的输入法里、在你的名字里、在你此刻的注视里——从古来，向今生。</p>
+        <p class="hint" id="p9hint">拖动手指，连接属于你的文字星图</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第10页 尾页 -->
+  <section class="slide s-paper" id="p10">
+    <div class="stage col">
+      <h2 class="title-l ink">去读一个字吧</h2>
+      <p class="big-line ink">它等了你三千年。</p>
+      <div class="links">
+        <div class="link-item"><b>中国文字博物馆</b><span>河南 · 安阳 · 甲骨文的家</span></div>
+        <div class="link-item"><b>殷契文渊</b><span>甲骨文数据库 · 免费向全世界开放</span></div>
+      </div>
+      <p class="np-foot">甲骨文的下一笔，由你写。</p>
+      <button class="btn-ink" id="replayBtn">再看一遍</button>
+    </div>
+  </section>
+</div>
+
+<nav id="dots"></nav>
+<button id="soundBtn" aria-label="声音开关">音</button>
+<div id="progress"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
